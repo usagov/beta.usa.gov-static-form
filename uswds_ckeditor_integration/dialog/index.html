@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Select columns | USA.revamp</title>
+  <link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/ajax-progress.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/autocomplete-loading.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/progress.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/sticky-header.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tabledrag.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tree-child.module.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/modules/contrib/uswds_ckeditor_integration/css/dialog.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/modules/contrib/uswds_paragraph_components/components/alert/uswds-paragraph-components-alerts.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?r46aq9" />
+<link rel="stylesheet" media="all" href="/themes/custom/usagov/css/styles.css?r46aq9" />
+
+  
+  </head>
+<body>
+<a href="#main-content" class="usa-sr-only focusable">
+  Skip to main content
+</a>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+
+
+<div class="usa-overlay"></div>
+
+<header class="usa-header usa-header--extended" id="header" role="banner">
+        <div class="usa-banner-inner">
+          <div>
+    <div id="block-englishbannercode" class="settings-tray-editable block block-block-content block-block-contentd61595f0-7e1c-4081-9eef-cdc5ebbf822b" data-drupal-settingstray="editable">
+  
+    
+      
+            <div><section class="usa-banner">
+    <div class="usa-banner">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/themes/custom/usagov/images/favicon-57.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
+        </div>
+        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/themes/custom/usagov/assets/img/icon-dot-gov.svg" alt="Dot gov">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The .gov means it’s official.</strong>
+              <br>
+              Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you’re on a federal government site.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/themes/custom/usagov/assets/img/icon-https.svg" alt="Https">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>The site is secure.</strong>
+              <br>
+              The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section></div>
+      
+  </div>
+<div id="block-betabanner" class="settings-tray-editable block block-block-content block-block-content189deb7d-0146-4d42-828d-c67ff9f0dcc6" data-drupal-settingstray="editable">
+  
+    
+      
+      <div>
+              <div>
+
+
+
+
+
+<div class="paragraph paragraph--type--uswds-alert paragraph--view-mode--default paragraph--id--1 usa-alert usa-alert--slim usa-alert--info">
+  <div class="usa-alert__body">
+    <h3 class="usa-alert__heading"></h3>
+    
+            <div><strong>This is a beta site.</strong> It's an early, in-progress version of an improved <a href="https://www.usa.gov/">USA.gov</a>. If you don't find what you're looking for, return to the main site.</div>
+      
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+<div class="language-switcher-language-url settings-tray-editable block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation" data-drupal-settingstray="editable">
+  
+    
+      <ul class="links usa-nav__primary usa-accordion"><li hreflang="es" data-drupal-link-system-path="uswds_ckeditor_integration/dialog" class="usa-nav__primary-item"><a href="/es/uswds_ckeditor_integration/dialog" class="language-link" hreflang="es" data-drupal-link-system-path="uswds_ckeditor_integration/dialog">Español</a></li></ul>
+  </div>
+<div id="block-englishheadercode" class="settings-tray-editable block block-block-content block-block-content644b7adb-94b1-497d-bd4d-c1f2a2bf9909" data-drupal-settingstray="editable">
+  
+    
+      
+            <div>  <div class="usa-navbar">
+    <div class="usa-logo" id="extended-logo">
+      <em class="usa-logo-text">
+            <a href="/" title="USAGov Logo"><img src="/themes/custom/usagov/images/LOGO_betasite_USAGOV_v2.png" alt="USAGov Logo"></a>
+          </em>
+    </div>
+    <button class="usa-menu-btn">Menu</button>
+  </div>
+  <nav aria-label="Primary navigation" class="usa-nav">
+    <div class="usa-nav__inner">
+      <button class="usa-nav__close">
+        <img src="/themes/custom/usagov/assets/img/usa-icons/close.svg" role="img" alt="Close" />
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item"><a href="/" class="usa-nav__link"><span>All Topics and Services</span></a>
+        </li>
+        <li class="usa-nav__primary-item"><a href="/about-the-us-and-its-government" class="usa-nav__link"><span>About the U.S. and Its Government</span></a>
+        </li>
+        <li class="usa-nav__primary-item"><a href="/money-and-credit" class="usa-nav__link"><span>Money and Credit</span></a>
+        </li>
+	<li class="usa-nav__primary-item"><a href="/laws-and-legal-issues" class="usa-nav__link"><span>Laws and Legal Issues</span></a>
+        </li>
+	<li class="usa-nav__primary-item"><a href="/scams-and-frauds" class="usa-nav__link"><span>Scams and Frauds</span></a>
+        </li>
+ </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          <li class="usa-nav__secondary-item">
+            <a href="">Call us at 1-844-USAGOV1</a>
+          </li>
+        </ul>
+
+        <form class="usa-search usa-search--small" role="search">
+          <label class="usa-sr-only" for="extended-search-field-en-small">
+            Search
+          </label>
+          <input
+            class="usa-input"
+            id="extended-search-field-en-small"
+            type="search"
+            name="search"
+            value="Search is disabled"
+             disabled
+          />
+          <button class="usa-button" type="submit">
+            <span class="usa-sr-only">Search</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+</div>
+      
+  </div>
+
+  </div>
+
+    </div>
+      
+
+        
+        </header>
+
+
+<main class="main-content usa-layout-docs usa-section " role="main" id="main-content">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="grid-container">
+                <div class="grid-row">
+              <div>
+    <div id="block-usagov-breadcrumbs" class="settings-tray-editable block block-system block-system-breadcrumb-block" data-drupal-settingstray="editable">
+  
+    
+          <nav class="margin-bottom-6" role="navigation" aria-labelledby="system-breadcrumb">
+        <h2 id="system-breadcrumb" class="usa-sr-only">Breadcrumb</h2>
+        <ol class="usa-breadcrumb__list">
+                            <li class="usa-breadcrumb__list-item">
+                                            <a href="/" class="usa-breadcrumb__link">Home</a>
+                                    </li>
+                    </ol>
+    </nav>
+
+  </div>
+
+  </div>
+
+        </div>
+
+        <div class="">
+            <div data-drupal-messages-fallback class="hidden"></div>
+
+
+        </div>
+
+          
+        <div class="grid-row grid-gap">
+            
+            <div class="usa-layout-docs__main usa-prose desktop:grid-col-fill">
+                    <div id="block-usagov-content" class="block block-system block-system-main-block">
+  
+    
+      <div id="uswds_grid-dialog-form"><form class="uswds-ckeditor-integration uswds_grid-dialog-step--select usa-form" data-drupal-selector="uswds-ckeditor-integration" action="/uswds_ckeditor_integration/dialog" method="post" id="uswds-ckeditor-integration" accept-charset="UTF-8">
+  Read-only on existing elements.<fieldset data-drupal-selector="edit-num-columns" id="edit-num-columns--wrapper" class="fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper usa-fieldset">
+      <legend class="usa-legend">
+    <span class="fieldset-legend">Select Number of Columns</span>
+  </legend>
+  <div class="fieldset-wrapper">
+            <div id="edit-num-columns"><div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-1" type="radio" id="edit-num-columns-1" name="num_columns" value="1" checked="checked" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-1" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_1.png" title="Column 1" /><p>Column 1</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-2" type="radio" id="edit-num-columns-2" name="num_columns" value="2" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-2" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_2.png" title="Column 2" /><p>Column 2</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-3" type="radio" id="edit-num-columns-3" name="num_columns" value="3" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-3" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_3.png" title="Column 3" /><p>Column 3</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-4" type="radio" id="edit-num-columns-4" name="num_columns" value="4" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-4" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_4.png" title="Column 4" /><p>Column 4</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-5" type="radio" id="edit-num-columns-5" name="num_columns" value="5" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-5" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_5.png" title="Column 5" /><p>Column 5</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-6" type="radio" id="edit-num-columns-6" name="num_columns" value="6" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-6" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_6.png" title="Column 6" /><p>Column 6</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-7" type="radio" id="edit-num-columns-7" name="num_columns" value="7" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-7" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_7.png" title="Column 7" /><p>Column 7</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-8" type="radio" id="edit-num-columns-8" name="num_columns" value="8" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-8" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_8.png" title="Column 8" /><p>Column 8</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-9" type="radio" id="edit-num-columns-9" name="num_columns" value="9" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-9" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_9.png" title="Column 9" /><p>Column 9</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-10" type="radio" id="edit-num-columns-10" name="num_columns" value="10" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-10" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_10.png" title="Column 10" /><p>Column 10</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-11" type="radio" id="edit-num-columns-11" name="num_columns" value="11" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-11" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_11.png" title="Column 11" /><p>Column 11</p></label>
+  
+  
+  </div>
+<div class="form-item usa-label js-form-item form-type-radio js-form-type-radio form-item-num-columns js-form-item-num-columns radio">
+  
+  
+  <input data-drupal-selector="edit-num-columns-12" type="radio" id="edit-num-columns-12" name="num_columns" value="12" class="form-radio usa-radio__input" />
+
+      <label for="edit-num-columns-12" class="usa-radio__label control-label option"><img src="/modules/contrib/uswds_ckeditor_integration/images/ui/col_12.png" title="Column 12" /><p>Column 12</p></label>
+  
+  
+  </div>
+</div>
+
+          </div>
+</fieldset>
+<input autocomplete="off" data-drupal-selector="form-fgkqut-atqp1pvyi0bhjfpiagjbsyik9jv1dxrgefoy" type="hidden" name="form_build_id" value="form-fGkQuT_aTQp1pVyi0BhjFPIaGJBsyiK9jv1DXRgefOY" class="usa-input" /><input data-drupal-selector="edit-uswds-ckeditor-integration" type="hidden" name="form_id" value="uswds_ckeditor_integration" class="usa-input" /><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="js-button-next button button--primary js-form-submit form-submit usa-button" data-drupal-selector="edit-actions-next" type="submit" id="edit-actions-next" name="op" value="Next" /></div>
+
+</form>
+</div>
+  </div>
+
+
+            </div>
+                     </div>
+    </div>
+</main>
+
+<footer class="usa-footer usa-footer--big" role="contentinfo">
+    
+        <div class="usa-footer__primary-section">
+        <div class="usa-footer__primary-content">
+                        <div class="grid-container">
+                <div class="grid-row grid-gap">
+                                       </div>
+            </div>
+                <div>
+    <div id="block-primaryfooterenglish" class="settings-tray-editable block block-block-content block-block-content40b89fdf-175f-4e77-9f83-96301e9120ad" data-drupal-settingstray="editable">
+  
+    
+      
+            <div><div class="usa-footer__primary-section">
+  <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <nav class="usa-footer__nav" aria-label="Footer navigation,,">
+            <div class="grid-row grid-gap-4">
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="
+                    usa-footer__primary-content
+                    usa-footer__primary-content--collapsible
+                  ">
+                  <h4 class="usa-footer__primary-link">Government Information</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a href="/"> All Topics and Services </a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);">Directory of U.S. Government Agencies and Departments</a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);">
+                      Branches of Government
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="
+                    usa-footer__primary-content
+                    usa-footer__primary-content--collapsible
+                  ">
+                  <h4 class="usa-footer__primary-link">About Us</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link ftr-list">
+                      <a class="disabled" href="javascript:void(0);"> Our Mission and History </a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a href="/policies">
+                        Privacy and Security Policies
+                      </a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a href="/accessibility">Accessibility Policy</a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled"  href="javascript:void(0);"> How to Cite USA.gov </a>
+                    </li>
+            
+                     <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);"> Real-time Website Data </a>
+                    </li>
+
+                  </ul>
+                </section>
+              </div>
+
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="
+                    usa-footer__primary-content
+                    usa-footer__primary-content--collapsible
+                  ">
+                  <h4 class="usa-footer__primary-link">For Federal Agencies</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);"> Partner With Us </a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);"> USAGov Blog </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+                <section class="
+                    usa-footer__primary-content
+                    usa-footer__primary-content--collapsible
+                  ">
+                  <h4 class="usa-footer__primary-link">For Media</h4>
+                  <ul class="usa-list usa-list--unstyled">
+                    <li class="usa-footer__secondary-link ftr-list">
+                      <a class="disabled" href="javascript:void(0);"> Feature Articles </a>
+                    </li>
+
+                    <li class="usa-footer__secondary-link">
+                      <a class="disabled" href="javascript:void(0);"> Explore More About USAGov </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="tablet:grid-col-4">
+          <div class="usa-sign-up">
+            <h3 class="usa-sign-up__heading">Sign Up To Receive Email Updates</h3>
+            <form class="usa-form">
+              <label class="usa-label" for="email">Enter your email</label>
+              <input class="usa-input" id="email" name="email" type="email" value="Sign-up function is disabled" disabled>
+              <button class="usa-button" type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
+      
+  </div>
+
+  </div>
+         </div>
+    </div>
+       
+  
+   
+      <div>
+    <div id="block-secondaryfooterenglish" class="settings-tray-editable block block-block-content block-block-content34c0b345-aba2-4df4-bd1e-cf2e870266f9" data-drupal-settingstray="editable">
+  
+    
+      
+            <div><div class="usa-footer__secondary-section">
+   <div class="grid-container">
+        <div class="grid-row grid-gap">
+            <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+                <div class="mobile-lg:grid-col-auto">
+                    <p class="usa-footer__logo-heading">USAGov Contact Center</p>
+                </div>
+                <div class="mobile-lg:grid-col-auto">
+                    <p>
+                        Ask USA.gov a question at
+                    </p>
+                    <address class="usa-footer__address">
+                        <div class="usa-footer__contact-info grid-row grid-gap">
+                          
+                                <a class="disabled" href="tel:1-844-872-4681">1-844-USAGOV1 (1-844-872-4681)</a>
+                      
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+                <h3 class="usa-footer__contact-heading">
+                    Find Us on Social Media
+                </h3>
+                <div class="usa-footer__social-links grid-row grid-gap-1">
+                    <div class="grid-col-auto">
+                        <a class="usa-social-link usa-social-link--facebook disabled" href="javascript:void(0);" alt="Facebook USAGov">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+
+                    <div class="grid-col-auto">
+                        <a class="usa-social-link usa-social-link--twitter disabled" href="javascript:void(0);" alt="Twitter USAGov">
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+
+                    <div class="grid-col-auto">
+                        <a class="usa-social-link usa-social-link--youtube disabled" href="javascript:void(0);" alt="YouTube USAGov">
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+
+                    <div class="grid-col-auto">
+                        <a class="usa-social-link usa-social-link--instagram disabled" href="javascript:void(0);" alt="Instagram USAGov">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-col-auto">
+            <a class="disabled" href="mailto:info@agency.gov">
+                Report a Website Issue
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+      
+  </div>
+
+  </div>
+ 
+   
+  </footer>
+ 
+ 
+    <div>
+    <div id="block-footeridentifierenglish" class="settings-tray-editable block block-block-content block-block-content2bd70942-1be7-4595-b6d1-76a52abfe7c0" data-drupal-settingstray="editable">
+  
+    
+      
+            <div><div class="usa-identifier">
+  <section class="usa-identifier__section usa-identifier__section--usagov"
+     aria-label="USAGov is the Official Guide to Government Information and Services">
+     <div class="usa-identifier__container">
+        <div class="usa-identifier__usagov-description">
+           USAGov Is the Official Guide To <span>&nbsp;Government Information and Services</span>
+        </div>
+     </div>
+  </section>
+</div></div>
+      
+  </div>
+
+  </div>
+ 
+ 
+
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"uswds_ckeditor_integration\/dialog","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"core\/jquery.form,editor\/drupal.editor.dialog,paragraphs\/drupal.paragraphs.unpublished,system\/base,usagov\/global-styling,uswds_base\/framework,uswds_ckeditor_integration\/dialog,uswds_paragraph_components\/uswds-alerts","theme":"usagov","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/uswds_ckeditor_integration\/dialog?ajax_form=1":true},"ajax":{"edit-actions-next":{"callback":"::submitStep","event":"click","url":"\/uswds_ckeditor_integration\/dialog?ajax_form=1","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Next"}}},"user":{"uid":0,"permissionsHash":"1366554faa5dcd7c4fa4e17ce22e35495b638e2dd1615ad58334baa1fbec2b87"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.6.0"></script>
+<script src="/core/assets/vendor/css-escape/css.escape.js?v=1.5.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=9.2.4"></script>
+<script src="/core/misc/drupal.js?v=9.2.4"></script>
+<script src="/core/misc/drupal.init.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-1-7-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/escape-selector-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/ie-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-active-element-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/safe-blur-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=5.2.0"></script>
+<script src="/themes/custom/usagov/scripts/uswds.min.js?v=1"></script>
+<script src="/core/misc/debounce.js?v=9.2.4"></script>
+<script src="/core/misc/displace.js?v=9.2.4"></script>
+<script src="/core/misc/jquery.tabbable.shim.js?v=9.2.4"></script>
+<script src="/core/misc/position.js?v=9.2.4"></script>
+<script src="/core/misc/dialog/dialog.js?v=9.2.4"></script>
+<script src="/core/misc/dialog/dialog.position.js?v=9.2.4"></script>
+<script src="/core/misc/dialog/dialog.jquery-ui.js?v=9.2.4"></script>
+<script src="/core/misc/progress.js?v=9.2.4"></script>
+<script src="/core/modules/responsive_image/js/responsive_image.ajax.js?v=9.2.4"></script>
+<script src="/core/misc/ajax.js?v=9.2.4"></script>
+<script src="/core/modules/editor/js/editor.dialog.js?v=9.2.4"></script>
+<script src="/core/assets/vendor/jquery-form/jquery.form.min.js?v=4.3.0"></script>
+
+</body>
+</html>
